@@ -21,11 +21,3 @@ Faculty of IT and programming
 ## Theme of the project
 
 - CV-website
-
-
-# web programming  5 sem
-
-Labs for web programming on the 5th semester ITMO university
-Faculty of IT and programming
-
-
