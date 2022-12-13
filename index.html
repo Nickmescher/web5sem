@@ -9,6 +9,7 @@
     <title>Title</title>
     <script defer src="js/loadtime.js"></script>
     <script defer src="js/menu.js"></script>
+    <script defer src="js/example.js"></script>
 </head>
 <body>
 <header id="st">
@@ -50,7 +51,7 @@
             </svg>
         </button>
 
-        <button class="menu__item" style="--bgColorItem:#65ddb7;">
+        <button class="menu__item enable-button"  style="--bgColorItem:#65ddb7;">
             <svg class="icon" viewBox="0 0 24 24" >
                 <path  d="M5.1,3.9h13.9c0.6,0,1.2,0.5,1.2,1.2v13.9c0,0.6-0.5,1.2-1.2,1.2H5.1c-0.6,0-1.2-0.5-1.2-1.2V5.1
           C3.9,4.4,4.4,3.9,5.1,3.9z"/>
@@ -87,9 +88,22 @@
 
     </article>
 
+        <h3>Gallery</h3>
+        <div class="swiper">
+            <div>
+                <div class="swiper-slide"><img src="materials/photo1.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="materials/photo2.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="materials/photo3.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="materials/photo4.jpg" alt=""></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+
     <div class="photos invisible-on-mobile" >
         <ul>
-            <li><img src="materials/photo1.jpg" alt=""></li>
+            <li><img src="materials/photo1.jpg" data-zoom="materials/photo3.jpg" alt=""></li>
             <li><img src="materials/photo3.jpg" alt=""></li>
             <li><img src="materials/photo2.jpg" alt=""></li>
             <li><img src="materials/photo4.jpg" alt=""></li>
@@ -159,5 +173,14 @@
     <span id="loadTime"></span>
 </footer>
 
+<script>
+    var swiper = new Swiper(".swiper", {
+        centeredSlides: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+</script>
 </body>
 </html>
